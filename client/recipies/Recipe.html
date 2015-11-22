@@ -1,0 +1,19 @@
+<template name="Recipe">
+	<article class="recipe">
+
+		<h3>{{name}}</h3>
+
+		<p>{{desc}}</p>
+		
+		<p>
+			{{#if Template.subscriptionsReady}}
+				{{#each Ingredients}}
+					<span class="ingredient">{{name}} - {{amount}}</span>
+				{{/each}}
+			{{else}}
+				Loading ...
+			{{/if}}
+		</p>
+		<a href="/recipe/{{_id}}" target="_blank">View Details</a>
+	</article>
+</template>
