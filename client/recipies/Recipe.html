@@ -8,7 +8,7 @@
 		<p>
 			{{#if Template.subscriptionsReady}}
 				{{#each Ingredients}}
-					<span class="ingredient">{{name}} - {{amount}}</span>
+					<li>{{name}} - <span class="amount">{{amount}}</span></li>
 				{{/each}}
 			{{else}}
 				Loading ...
